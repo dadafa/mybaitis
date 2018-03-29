@@ -1,0 +1,9 @@
+第一步：
+	先导包。
+第二步：
+	加入配置文件
+			-1.sqlMapConfig.xml--->（mybatis）用来扫描包名执行sql语句
+			-2.db.properties-->数据库连接池文件
+			-3.applicationContext.xml--->（spring约束配置）
+第三步:
+		写包类测试。

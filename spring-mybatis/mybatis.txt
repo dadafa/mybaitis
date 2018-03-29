@@ -1,0 +1,15 @@
+<Mappers>是用来在mybatis初始化的时候，告诉mybatis需要引入哪些Mapper映射文件。
+
+<mappers>
+		通过mapper接口加载映射文件
+		遵循规范：需要将mapper接口类名与xml文件映射名称保持一致，且在一个目录中，规范的前提是：使用的是mapper.xml代理的方法
+	<mapper class="com.itheima.mybatis.mapper" />
+</mappers>
+
+
+<mappers>
+		<!-- 批量加载     
+            指定接口的包名称，自动扫描包下的所有mapper接口进行加载    
+        --> 
+		<package name="com.itheima.mybatis.mapper" />
+</mappers>

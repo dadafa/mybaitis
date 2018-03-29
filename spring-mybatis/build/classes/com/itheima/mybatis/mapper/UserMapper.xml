@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!--编写命名空间 -->
+<mapper namespace="com.itheima.mybatis.mapper.UserMapper">
+
+	<!--通过用户名查询密码 -->
+	<select id="findUserById" resultType="userInfo" parameterType="String">
+		select password from bs_userinfo where username=#{a}
+	</select>
+
+	<!--添加 -->
+	<insert id="insertUser" parameterType="userInfo">
+		insert into bs_userinfo values(#{username},#{password},#{email})
+	</insert>
+
+</mapper>
